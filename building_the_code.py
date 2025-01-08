@@ -21,7 +21,7 @@ def data_to_coordinates(data_line: np.ndarray,radar_name: str) ->list:
     R_data = data_line[1]
     azimuth_data = data_line[3]
     elevation_data = data_line[2]
-
+    ID_data = data_line[9]
     earth_rad = 6371000.0
 
     latitude = math.radians(radar_titude[radar_name]["lat"])
@@ -33,12 +33,13 @@ def data_to_coordinates(data_line: np.ndarray,radar_name: str) ->list:
         latitude) * math.sin(longitude) + earth_rad * math.cos(latitude) * math.sin(longitude)
     final_x = x * math.cos(longitude) * math.sin(latitude) + y * math.sin(longitude) + z * math.cos(
         latitude) * math.cos(longitude) + earth_rad * math.cos(latitude) * math.cos(longitude)
-    return [final_x, final_y, final_z]
+    return [final_x, final_y, final_z, ID_data]
 
 
 def generate_list(macam_name: tuple) -> list[list]:
     """gets macam , generates a list of all measurements of it as a list
     looks like: return [lat, long, z, ID]"""
+
     all_data = []
     for i in range(macam_name[1].shape[0]):
         all_data.append(data_to_coordinates(macam_name[1][i], macam_name[0]))

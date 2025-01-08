@@ -7,7 +7,6 @@ import numpy as np
 
 def read_from_macam(name: str) -> np.ndarray:
     # Read the CSV file
-    print(name)
     df = pd.read_csv(name, header=None, skiprows=1)
 
     #Convert the DataFrame to a NumPy array
@@ -40,7 +39,7 @@ Tseelim_with_id_impact_point = ("tseelim", read_from_macam(r"With_ID\Impact_poin
 YABA_with_id_impact_point = ("yaba", read_from_macam(r"With_ID\Impact_points_data\YABA_with_ID.csv"))
 
 
-Ashdod_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Ashdod_without_ID.csv")
+"""Ashdod_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Ashdod_without_ID.csv")
 
 Carmel_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Carmel_without_ID.csv")
 Gosh_dan_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Gosh_dan_without_ID.csv")
@@ -60,12 +59,12 @@ Modiin_without_id_impact_point = read_from_macam(r"Without_ID\Impact_points_data
 Ofakim_without_id_impact_point = read_from_macam(r"Without_ID\Impact_points_data\Ofakim_without_ID.csv")
 Tseelim_without_id_impact_point = read_from_macam(r"Without_ID\Impact_points_data\Tseelim_without_ID.csv")
 YABA_without_id_impact_point = read_from_macam(r"Without_ID\Impact_points_data\YABA_without_ID.csv")
+"""
 
-print(Ashdod_without_id_target_bank)
 list_without_ID = []
 #list_without_ID.append()
 
-def extract_to_times(macam: np.ndarray):
+"""def extract_to_times(macam: np.ndarray):
     times_existing = []
     data_for_times = []
     new_time = 0
@@ -79,4 +78,4 @@ def extract_to_times(macam: np.ndarray):
 
 print(extract_to_times(Ashdod_without_id_target_bank))
 
-#divided_to_times = dict{}
+#divided_to_times = dict{}"""
