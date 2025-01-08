@@ -69,9 +69,9 @@ def extract_to_times(macam: np.ndarray):
     times_existing = []
     data_for_times = []
     new_time = 0
-    for i in range(10):   #macam.shape[0]
+    for i in range(macam.shape[0]):
         if macam[i][0] not in times_existing:
-            times_existing.append(macam[i][0].astype(float))
+            times_existing.append(float(macam[i][0]))
             new_time += 1
             #data_for_times.append((macam[:,1:])[i])
     print(new_time)
