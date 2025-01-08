@@ -7,10 +7,10 @@ import numpy as np
 
 def read_from_macam(name: str) -> np.ndarray:
     # Read the CSV file
-
+    print(name)
     df = pd.read_csv(name, header=None, skiprows=1)
 
-    # Convert the DataFrame to a NumPy array
+    #Convert the DataFrame to a NumPy array
     data_array = df.to_numpy()
 
     """
@@ -19,25 +19,25 @@ def read_from_macam(name: str) -> np.ndarray:
     return data_array[:,1:]
 
 
-Ashdod_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Ashdod_with_ID.csv")
-Carmel_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Carmel_with_ID.csv")
-Gosh_dan_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Gosh_dan_with_ID.csv")
-Kiryat_Gat_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Kiryat_Gat_with_ID.csv")
-Meron_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Meron_with_ID.csv")
-Modiin_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Modiin_with_ID.csv")
-Ofakim_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Ofakim_with_ID.csv")
-Tseelim_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Tseelim_with_ID.csv")
-YABA_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\YABA_with_ID.csv")
+Ashdod_with_id_target_bank = ("ashdod", read_from_macam(r"With_ID\Target_bank_data\Ashdod_with_ID.csv"))
+Carmel_with_id_target_bank = ("karmel",read_from_macam(r"With_ID\Target_bank_data\Carmel_with_ID.csv"))
+Gosh_dan_with_id_target_bank = ("dan", read_from_macam(r"With_ID\Target_bank_data\Gosh_dan_with_ID.csv"))
+Kiryat_Gat_with_id_target_bank = ("gat", read_from_macam(r"With_ID\Target_bank_data\Kiryat_Gat_with_ID.csv"))
+Meron_with_id_target_bank = ("meiron", read_from_macam(r"With_ID\Target_bank_data\Meron_with_ID.csv"))
+Modiin_with_id_target_bank = ("modiin", read_from_macam(r"With_ID\Target_bank_data\Modiin_with_ID.csv"))
+Ofakim_with_id_target_bank = ("ofakim", read_from_macam(r"With_ID\Target_bank_data\Ofakim_with_ID.csv"))
+Tseelim_with_id_target_bank = ("tseelim", read_from_macam(r"With_ID\Target_bank_data\Tseelim_with_ID.csv"))
+YABA_with_id_target_bank = ("yaba", read_from_macam(r"With_ID\Target_bank_data\YABA_with_ID.csv"))
 
-Ashdod_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Ashdod_with_ID.csv")
-Carmel_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Carmel_with_ID.csv")
-Gosh_dan_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Gosh_dan_with_ID.csv")
-Kiryat_Gat_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Kiryat_Gat_with_ID.csv")
-Meron_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Meron_with_ID.csv")
-Modiin_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Modiin_with_ID.csv")
-Ofakim_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Ofakim_with_ID.csv")
-Tseelim_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Tseelim_with_ID.csv")
-YABA_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\YABA_with_ID.csv")
+Ashdod_with_id_impact_point = ("ashdod",read_from_macam(r"With_ID\Impact_points_data\Ashdod_with_ID.csv"))
+Carmel_with_id_impact_point = ("karmel",read_from_macam(r"With_ID\Impact_points_data\Carmel_with_ID.csv"))
+Gosh_dan_with_id_impact_point = ("dan", read_from_macam(r"With_ID\Impact_points_data\Gosh_dan_with_ID.csv"))
+Kiryat_Gat_with_id_impact_point = ("gat", read_from_macam(r"With_ID\Impact_points_data\Kiryat_Gat_with_ID.csv"))
+Meron_with_id_impact_point = ("meiron", read_from_macam(r"With_ID\Impact_points_data\Meron_with_ID.csv"))
+Modiin_with_id_impact_point = ("modiin", read_from_macam(r"With_ID\Impact_points_data\Modiin_with_ID.csv"))
+Ofakim_with_id_impact_point = ("ofakim", read_from_macam(r"With_ID\Impact_points_data\Ofakim_with_ID.csv"))
+Tseelim_with_id_impact_point = ("tseelim", read_from_macam(r"With_ID\Impact_points_data\Tseelim_with_ID.csv"))
+YABA_with_id_impact_point = ("yaba", read_from_macam(r"With_ID\Impact_points_data\YABA_with_ID.csv"))
 
 
 Ashdod_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Ashdod_without_ID.csv")

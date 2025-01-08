@@ -36,12 +36,12 @@ def data_to_coordinates(data_line: np.ndarray,radar_name: str) ->list:
     return [final_x, final_y, final_z]
 
 
-def generate_list(macam_name: np.ndarray) -> list[list]:
-    """gets macam name, generates a list of all measurements of it as a list
+def generate_list(macam_name: tuple) -> list[list]:
+    """gets macam , generates a list of all measurements of it as a list
     looks like: return [lat, long, z, ID]"""
     all_data = []
-    for i in range(macam_name.shape[0]):
-        all_data.append(data_to_coordinates(macam_name[i], ))
+    for i in range(macam_name[1].shape[0]):
+        all_data.append(data_to_coordinates(macam_name[1][i], macam_name[0]))
     return all_data
 
 def merge_lists(list_of_names: list) ->list[list]:

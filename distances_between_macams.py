@@ -20,6 +20,26 @@ radar_titude = {
     "karmel": {"lat" : 32.65365306190331, "lon": 35.03028065430696}
 }
 
+"""Ashdod_with_id_target_bank
+Carmel_with_id_target_bank
+Gosh_dan_with_id_target_bank
+Kiryat_Gat_with_id_target_bank
+Meron_with_id_target_bank 
+Modiin_with_id_target_bank
+Ofakim_with_id_target_bank
+Tseelim_with_id_target_bank
+YABA_with_id_target_bank
+Ashdod_with_id_impact_point
+Carmel_with_id_impact_point
+Gosh_dan_with_id_impact_point
+Kiryat_Gat_with_id_impact_point
+Meron_with_id_impact_point
+Modiin_with_id_impact_point
+Ofakim_with_id_impact_point
+Tseelim_with_id_impact_point
+YABA_with_id_impact_point"""
+
+
 def to_cartesian(teta, a, R):
     R = float(R)
     a = float(a)
