@@ -64,10 +64,6 @@ def data_from_dict_to_launchplaces(missiles_dict: dict) -> list[list]:
         place= calculate_where_from(missiles_dict[ID])
 
 
-
-
-def from_cartesian_to_coordinates(coordinates: list) -> tuple:
-    pass
 def export_to_excel(data: list[list]) ->None:
     pass
 def export_to_excel(result: list[list[float, float, str, str]], output_name, DEBUD=False):
