@@ -94,10 +94,10 @@ def main():
     Meron_with_id_target_bank,Modiin_with_id_target_bank,Ofakim_with_id_target_bank,
     Tseelim_with_id_target_bank,YABA_with_id_target_bank])
 
-    all_measurements_impact = [Ashdod_with_id_impact_point,
+    all_measurements_impact = merge_lists([Ashdod_with_id_impact_point,
     Carmel_with_id_impact_point,Gosh_dan_with_id_impact_point,
     Kiryat_Gat_with_id_impact_point,Meron_with_id_impact_point ,Modiin_with_id_impact_point,
-    Tseelim_with_id_impact_point,YABA_with_id_impact_point]
+    Tseelim_with_id_impact_point,YABA_with_id_impact_point])
 
     data_by_missile_target = split_to_missiles(all_measurements_target)
     data_by_missile_impact = split_to_missiles(all_measurements_impact)
