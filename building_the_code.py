@@ -18,22 +18,22 @@ from distances_between_macams import *
 def data_to_coordinates(data_line: np.ndarray,radar_name: str) ->list:
     """gets data line from macam, and returns absolute location coordinates
     latitude, longtitude, and height"""
-
-    R_data =
-    azimuth_data =
-    teta_data = 
+    R_data = data_line[1]
+    azimuth_data = data_line[3]
+    elevation_data = data_line[2]
 
     earth_rad = 6371000.0
 
     latitude = math.radians(radar_titude[radar_name]["lat"])
     longitude = math.radians(radar_titude[radar_name]["lon"])
 
-    x, y, z = to_cartesian(R_data, azimuth_data, teta_data)
+    x, y, z = to_cartesian(azimuth_data, elevation_data, R_data)
     final_z = x * math.cos(latitude) + z * math.sin(latitude) + earth_rad * math.sin(latitude)
     final_y = x * math.sin(longitude) * math.sin(latitude) + y * math.cos(longitude) + z * math.cos(
         latitude) * math.sin(longitude) + earth_rad * math.cos(latitude) * math.sin(longitude)
     final_x = x * math.cos(longitude) * math.sin(latitude) + y * math.sin(longitude) + z * math.cos(
         latitude) * math.cos(longitude) + earth_rad * math.cos(latitude) * math.cos(longitude)
+    return [final_x, final_y, final_z]
 
 
 def generate_list(macam_name: np.ndarray) -> list[list]:
@@ -41,7 +41,7 @@ def generate_list(macam_name: np.ndarray) -> list[list]:
     looks like: return [lat, long, z, ID]"""
     all_data = []
     for i in range(macam_name.shape[0]):
-        all_data.append(data_to_coordinates(macam_name[i]))
+        all_data.append(data_to_coordinates(macam_name[i], ))
     return all_data
 
 def merge_lists(list_of_names: list) ->list[list]:
