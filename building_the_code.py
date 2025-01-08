@@ -65,5 +65,6 @@ def data_from_dict_to_launchplaces(missiles_dict: dict) -> list[list]:
 def export_to_excel(result: list[list[float, float, str, str]], output_name, DEBUD=False):
     result_to_csv(result, output_name, DEBUD)
 
+
 def main():
     pass
