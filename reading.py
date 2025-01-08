@@ -18,7 +18,7 @@ def read_from_macam(name: str) -> np.ndarray:
 4,5,6   ======>>>>>      [4, 5, 6]"""
     return data_array[:,1:]
 
-"""
+
 Ashdod_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Ashdod_with_ID.csv")
 Carmel_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Carmel_with_ID.csv")
 Gosh_dan_with_id_target_bank = read_from_macam(r"With_ID\Target_bank_data\Gosh_dan_with_ID.csv")
@@ -39,9 +39,9 @@ Ofakim_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Ofaki
 Tseelim_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\Tseelim_with_ID.csv")
 YABA_with_id_impact_point = read_from_macam(r"With_ID\Impact_points_data\YABA_with_ID.csv")
 
-"""
+
 Ashdod_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Ashdod_without_ID.csv")
-"""
+
 Carmel_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Carmel_without_ID.csv")
 Gosh_dan_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Gosh_dan_without_ID.csv")
 Kiryat_Gat_without_id_target_bank = read_from_macam(r"Without_ID\Target_bank_data\Kiryat_Gat_without_ID.csv")
@@ -60,7 +60,7 @@ Modiin_without_id_impact_point = read_from_macam(r"Without_ID\Impact_points_data
 Ofakim_without_id_impact_point = read_from_macam(r"Without_ID\Impact_points_data\Ofakim_without_ID.csv")
 Tseelim_without_id_impact_point = read_from_macam(r"Without_ID\Impact_points_data\Tseelim_without_ID.csv")
 YABA_without_id_impact_point = read_from_macam(r"Without_ID\Impact_points_data\YABA_without_ID.csv")
-"""
+
 print(Ashdod_without_id_target_bank)
 list_without_ID = []
 #list_without_ID.append()
