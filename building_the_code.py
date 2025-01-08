@@ -45,15 +45,14 @@ def calculate_where_to(list_of_missile: list[list]) -> tuple:
 def determine_ammunition_type(list_of_missile: list[list]) -> str:
     """gets the data for a missile, returns what is it's type"""
 
-"""def certainty(x, y):
+def certainty(x, y):
     calculation = y
     certainty_value = x
     if calculation > x:
         return False
     else:
         return True
-def from_cartesian_to_coordinates():
-        return True"""
+
 
 
 def export_to_excel(result: list[list[float, float, str, str]], output_name, DEBUD=False):
