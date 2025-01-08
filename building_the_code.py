@@ -64,6 +64,8 @@ def certainty(x, y):
         return False
     else:
         return True
+def from_cartesian_to_coordinates():
+        return True"""
 
 
 def export_to_excel(result: list[list[float, float, str, str]], output_name, DEBUD=False):
