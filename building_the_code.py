@@ -43,7 +43,7 @@ def split_to_missiles(list_of_all: list[list]) ->dict:
     for data_list in list_of_all:
         if data_list[3] not in missiles_dict.keys():
             missiles_dict[data_list[3]] = data_list[1:]
-
+    return missiles_dict
 
 
 
@@ -64,8 +64,6 @@ def certainty(x, y):
         return False
     else:
         return True
-def from_cartesian_to_coordinates():
-        return True"""
 
 
 def export_to_excel(result: list[list[float, float, str, str]], output_name, DEBUD=False):
@@ -86,6 +84,7 @@ def main():
 
     data_by_missile_target = split_to_missiles(all_measurements_target)
     data_by_missile_impact = split_to_missiles(all_measurements_impact)
+
     target_bank = data_form_dict_to_places(data_by_missile_target, "from")
     hitplaces = data_form_dict_to_places(data_by_missile_impact, "to")
 
