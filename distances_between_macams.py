@@ -45,7 +45,7 @@ def radar_data_to_cart_earth(R_data, azimuth_data, teta_data, radar_name: str):
     final_y = x * math.sin(longitude) * math.sin(latitude) + y * math.cos(longitude) + z * math.cos(latitude) * math.sin(longitude) + earth_rad * math.cos(latitude) * math.sin(longitude)
     final_x = x * math.cos(longitude) * math.sin(latitude) + y * math.sin(longitude) + z * math.cos(latitude) * math.cos(longitude) + earth_rad * math.cos(latitude) * math.cos(longitude)
 
-    return final_x, final_y, final_z
+    return [final_x, final_y, final_z]
 
 def from_cart_to_titude(x, y, z):
     lat = math.degrees(math.atan(z / math.sqrt(x**2 + y**2)))

@@ -12,12 +12,28 @@ import create_list_for_excel
 from convert_to_csv import result_to_csv
 from reading import *
 from create_list_for_excel import *
+from distances_between_macams import *
 #################################################
 
-def data_to_coordinates(data_line: np.ndarray) ->list:
+def data_to_coordinates(data_line: np.ndarray,radar_name: str) ->list:
     """gets data line from macam, and returns absolute location coordinates
     latitude, longtitude, and height"""
-    pass
+
+    R_data =
+    azimuth_data =
+    teta_data = 
+
+    earth_rad = 6371000.0
+
+    latitude = math.radians(radar_titude[radar_name]["lat"])
+    longitude = math.radians(radar_titude[radar_name]["lon"])
+
+    x, y, z = to_cartesian(R_data, azimuth_data, teta_data)
+    final_z = x * math.cos(latitude) + z * math.sin(latitude) + earth_rad * math.sin(latitude)
+    final_y = x * math.sin(longitude) * math.sin(latitude) + y * math.cos(longitude) + z * math.cos(
+        latitude) * math.sin(longitude) + earth_rad * math.cos(latitude) * math.sin(longitude)
+    final_x = x * math.cos(longitude) * math.sin(latitude) + y * math.sin(longitude) + z * math.cos(
+        latitude) * math.cos(longitude) + earth_rad * math.cos(latitude) * math.cos(longitude)
 
 
 def generate_list(macam_name: np.ndarray) -> list[list]:
@@ -91,3 +107,5 @@ def main():
     export_to_excel(target_bank, "results_target_bank")
     export_to_excel(hitplaces, "results_hitplaces")
 
+if __name__ == "__main__":
+    main()
