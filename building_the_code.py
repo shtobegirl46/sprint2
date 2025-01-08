@@ -9,7 +9,6 @@
 #calculate ID
 #divide information per til and macam
 
-
 #################################################
 import numpy as np
 from convert_to_csv import result_to_csv
@@ -35,14 +34,20 @@ def merge_lists(list_of_names: list) ->list[list]:
 def split_to_missiles(list_of_all: list[list]) ->dict:
     """dfghj"""
     pass
+    """gets the list of all lists of coordinates, and returns a dictionary :
+    for each ID which is the key, it matches 2D list of data"""
 
 
-def calculate_where_from(ID: str[int]):
+def calculate_where_from(list_of_missile: list[list]) ->list:
+    """gets the key"""
+
+def calculate_where_to(list_of_missile: list[list]) -> list:
     pass
 
-def calculate_where_to():
+
+def determine_ammunition_type(list_of_missile: list[list]) -> str:
     pass
-def certainty(x, y):
+"""def certainty(x, y):
     calculation = y
     certainty_value = x
     if calculation > x:
@@ -50,6 +55,20 @@ def certainty(x, y):
     else:
         return True
 def from_cartesian_to_coordinates():
+        return True"""
+
+def data_from_dict_to_launchplaces(missiles_dict: dict) -> list[list]:
+    data = []
+    for ID in missiles_dict.keys():
+        ammu_type = determine_ammunition_type(missiles_dict[ID])
+        place= calculate_where_from(missiles_dict[ID])
+
+
+
+
+def from_cartesian_to_coordinates(coordinates: list) -> tuple:
+    pass
+def export_to_excel(data: list[list]) ->None:
     pass
 def export_to_excel(result: list[list[float, float, str, str]], output_name, DEBUD=False):
     result_to_csv(result, output_name, DEBUD)
