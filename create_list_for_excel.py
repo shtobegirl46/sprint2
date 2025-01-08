@@ -1,9 +1,15 @@
 from building_the_code import determine_ammunition_type, calculate_where_from, calculate_where_to, certainty
-
+import math
 
 def return_to_coordinates(cartesian: list) ->tuple:
     """gets x, y, z and returns latitude and longtitude """
+    x = float(cartesian[0])
+    y = float(cartesian[1])
+    z = float(cartesian[2])
+    lat = math.degrees(math.atan(z / math.sqrt(x ** 2 + y ** 2)))
+    lon = math.degrees(math.atan(x / y))
 
+    return lat, lon
 def data_form_dict_to_places(missiles_dict: dict, from_or_to: str) -> list[list]:
     """
     This function gets missiles_dict and return for every missile a list with all the data
