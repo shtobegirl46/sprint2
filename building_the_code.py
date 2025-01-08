@@ -9,9 +9,11 @@
 #calculate ID
 #divide information per til and macam
 
+
 #################################################
 import numpy as np
-import pandas
+from convert_to_csv import result_to_csv
+
 #################################################
 
 def data_to_coordinates(data_line: np.ndarray) ->list:
@@ -23,13 +25,16 @@ def data_to_coordinates(data_line: np.ndarray) ->list:
 def generate_list(macam_name: str) -> list[list]:
     """gets macam name, generates a list of all measurements of it as a list
     looks like: return [x, y, z, ID]"""
+    pass
 
 def merge_lists(list_of_names: list) ->list[list]:
     """gets lists from different macams using 'generate_list' and returns one list
     of [x, y, z, ID] lists"""
+    pass
 
 def split_to_missiles(list_of_all: list[list]) ->dict:
     """dfghj"""
+    pass
 
 
 def calculate_where_from(ID: str[int]):
@@ -44,10 +49,10 @@ def certainty(x, y):
         return False
     else:
         return True
-def from_cartesian_to_coordinates()
-
-def export_to_excel():
+def from_cartesian_to_coordinates():
     pass
-
+def export_to_excel(result: list[list[float, float, str, str]], output_name, DEBUD=False):
+    result_to_csv(result, output_name, DEBUD)
 
 def main():
+    pass
